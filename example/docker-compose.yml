@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  gen-xauth:
+    image: naokitakahashi12/xauth:alpine
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ~/.Xauthority:/root/.Xauthority:ro
+      - /tmp/:/tmp/
